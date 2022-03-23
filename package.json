@@ -1,6 +1,6 @@
 {
   "name": "zwj-name-converter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert any Handshake Name to Unicode, respecting the Zero Width Joiner (ZWJ) character.",
   "main": "index.js",
   "repository": {
