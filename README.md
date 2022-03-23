@@ -39,3 +39,6 @@ npm test
 ## License
 
 _zwj-name-converter_ is available under the [MIT](https://mths.be/mit) license.
+
+[ci-status-img]: https://github.com/0xStefan/zwj-name-converter/workflows/Build/badge.svg
+[ci-status-url]: https://github.com/0xStefan/zwj-name-converter/tree/main
