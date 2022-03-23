@@ -1,0 +1,30 @@
+{
+  "name": "name-to-unicode",
+  "version": "1.0.0",
+  "description": "Convert any Handshake Name to Unicode, respecting the Zero Width Joiner (ZWJ) character.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xStefan/name-to-unicode.git"
+  },
+  "keywords": [
+    "handshake",
+    "unicode",
+    "emojis",
+    "characters"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "0xStefan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0xStefan/name-to-unicode/issues"
+  },
+  "homepage": "https://github.com/0xStefan/name-to-unicode#readme",
+  "dependencies": {
+    "ava": "^4.1.0",
+    "idna-uts46-hx": "^3.4.0",
+    "punycode": "^2.1.1"
+  }
+}
