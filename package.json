@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0xStefan/name-to-unicode.git"
+    "url": "git+https://github.com/0xStefan/zwj-name-converter.git"
   },
   "keywords": [
     "handshake",
@@ -19,9 +19,9 @@
   "author": "0xStefan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/0xStefan/name-to-unicode/issues"
+    "url": "https://github.com/0xStefan/zwj-name-converter/issues"
   },
-  "homepage": "https://github.com/0xStefan/name-to-unicode#readme",
+  "homepage": "https://github.com/0xStefan/zwj-name-converter#readme",
   "dependencies": {
     "ava": "^4.1.0",
     "idna-uts46-hx": "^3.4.0",
