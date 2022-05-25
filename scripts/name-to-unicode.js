@@ -21,6 +21,11 @@ module.exports = (name) => {
   // Return cleaned name if no punycode
   if (!punycodeRegex().test(name)) return name;
 
+  // Return cleaned name if invalid punycode
+  if (name.startsWith("xn--1ug")) {
+    return name;
+  }
+
   const allChars = tonedEmojis.concat(skinColors);
   let unicode;
   let chars = [];
@@ -28,12 +33,8 @@ module.exports = (name) => {
   try {
     unicode = uts46.toUnicode(name);
   } catch (error) {
-    try {
-      unicode = punycode.toUnicode(name);
-    } catch (error) {
-      // Invalid
-      return "";
-    }
+    // Invalid punycode, return cleaned name
+    return name;
   }
 
   let i = 0;
