@@ -34,12 +34,21 @@ test("Convert Input to Unicode Handshake name including zwj", (t) => {
   t.is(nameToUnicode("xn--qn8hh5i"), "🫳🏿");
   t.is(nameToUnicode("xn--nn8hea944cfa"), "🫱🏼‍🫲🏾");
   t.is(nameToUnicode("🫄🏾"), "🫄🏾");
+  t.is(nameToUnicode("😄😃🫠"), "😄😃🫠");
   t.is(nameToUnicode("I love 🍕"), "ilove🍕");
   t.is(nameToUnicode("With Ümlaut ö"), "withümlautö");
-  t.is(nameToUnicode("xn--vi8h🍕"), "xn--vi8h🍕");
-  t.is(nameToUnicode("xn--vi8h文教材"), "xn--vi8h文教材");
-  t.is(nameToUnicode("&/#,+()$~%.':*?!<>{}[]xn--vi8h🍕"), "xn--vi8h🍕");
-  t.is(nameToUnicode("xn--zugaaaa"), "​​​​​");
-  t.is(nameToUnicode("xn--1ug5408p"), "🪪");
   t.is(nameToUnicode("👨🏾❤👨🏽"), "👨🏾‍❤‍👨🏽");
+});
+
+test("Don't convert invalid punycode", (t) => {
+  t.is(nameToUnicode("xn--zugaaaa"), "xn--zugaaaa");
+  t.is(nameToUnicode("xn--1ug5408p"), "xn--1ug5408p");
+  t.is(nameToUnicode("xn--lxg0205p"), "xn--lxg0205p");
+  t.is(nameToUnicode("xn--lxg2706p"), "xn--lxg2706p");
+  t.is(nameToUnicode("xn--v86c5408p"), "xn--v86c5408p");
+  t.is(nameToUnicode("xn--lug"), "xn--lug");
+  t.is(nameToUnicode("xn--3ug"), "xn--3ug");
+  t.is(nameToUnicode("xn--vi8h🍕"), "xn--xn--vi8h-wh25g");
+  t.is(nameToUnicode("xn--vi8h文教材"), "xn--xn--vi8h-5x3qlog6n");
+  t.is(nameToUnicode("&/#,+()$~%.':*?!<>{}[]xn--vi8h🍕"), "xn--xn--vi8h-wh25g");
 });
