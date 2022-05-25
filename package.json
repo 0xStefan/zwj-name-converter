@@ -24,7 +24,7 @@
   "homepage": "https://github.com/0xStefan/zwj-name-converter#readme",
   "dependencies": {
     "ava": "^4.1.0",
-    "idna-uts46-hx": "^3.4.0",
+    "idna-uts46-hx": "^4.0.0",
     "punycode": "^2.1.1"
   }
 }
