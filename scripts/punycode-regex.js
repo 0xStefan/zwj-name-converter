@@ -1,3 +1,3 @@
 "use strict";
 
-module.exports = () => /xn--[a-z0-9]+/i;
+module.exports = () => /xn-{2,}[a-z0-9]+/i;
