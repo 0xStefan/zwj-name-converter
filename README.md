@@ -24,6 +24,11 @@ converter.nameToUnicode("xn--vi8h"); // 🍕
 converter.nameToUnicode("xn--nn8hi4bz4d"); // 🧑🏼‍🚀
 converter.nameToUnicode("👨🏾❤👨🏽"); // 👨🏾‍❤‍👨🏽
 
+// Unsupported or Invalid Punycode will not be converted
+converter.nameToUnicode("xn--0"); // xn--0
+converter.nameToUnicode("xn--v86c5408p"); // xn--v86c5408p
+converter.nameToUnicode("xn--1ug5408p"); // xn--1ug5408p
+
 // To ASCII
 converter.nameToAscii("🍕"); // xn--vi8h
 converter.nameToAscii("&/#, +()$~%.AL IC E-bob"); // alice-bob
